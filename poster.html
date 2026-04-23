@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Poster - Final A4</title>
+    <title>Lab Poster - JPG Version</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #f1f5f9; margin: 0; padding: 0; }
+        body { background-color: #ffffff; margin: 0; padding: 0; }
         .poster-container {
             width: 794px;
             height: 1123px;
             background-color: #ffffff;
             margin: 0 auto;
             position: relative;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             display: flex;
             flex-direction: column;
             color: #000000;
             overflow: hidden;
-            border: 1px solid #ccc;
         }
         @media print {
             body { background: white; margin: 0; padding: 0; }
@@ -26,7 +25,6 @@
                 width: 100% !important;
                 height: 100% !important;
                 border: none !important;
-                box-shadow: none !important;
             }
         }
         .header-box {
@@ -34,31 +32,30 @@
             color: white;
             font-weight: bold;
             text-align: center;
-            padding: 5px;
-            margin-bottom: 10px;
+            padding: 4px;
+            margin-bottom: 8px;
             border-radius: 4px;
-            font-size: 14px;
+            font-size: 13px;
         }
         .poster-img {
             width: 100%;
             height: auto;
-            max-height: 170px;
+            max-height: 175px;
             object-fit: contain;
-            border: 1px solid #ddd;
-            margin-bottom: 8px;
+            border: 1px solid #000;
+            margin-bottom: 6px;
             display: block;
         }
-        ul { list-style-type: disc; padding-left: 20px; font-size: 12px; }
-        p, td { font-size: 12px; }
+        .content-text { font-size: 11px; line-height: 1.4; color: #000; }
     </style>
 </head>
 <body>
     <div class="poster-container">
+        
         <div class="flex items-center justify-between px-6 py-2 border-b h-20">
-            <img src="logo.png" onerror="this.src='logo.jpg'" class="h-14">
+            <img src="logo.jpg" class="h-14">
             <div class="text-center">
                 <h1 class="text-blue-900 text-lg font-bold">BITS Pilani, K K Birla Goa Campus</h1>
-                <p class="text-gray-600">Mechanical Engineering Department</p>
             </div>
             <div class="flex h-10 w-24">
                 <div class="bg-yellow-500 w-1/3"></div>
@@ -67,55 +64,50 @@
             </div>
         </div>
 
-        <div class="bg-gray-100 text-center py-4 border-b-2 border-yellow-500">
-            <h1 class="text-xl font-bold uppercase">Deformation Studies on Ultra-soft Polymers</h1>
-            <p class="font-bold text-blue-900">Pawar Rajat Ravindra (2023PHXF0134G)</p>
-            <p class="text-xs italic">Supervisors: Prof. Iniyan Thiruzelvam N. & Prof. Vikas V. Chaudhari</p>
+        <div class="bg-gray-100 text-center py-3 border-b-2 border-yellow-500">
+            <h1 class="text-lg font-bold uppercase">Deformation Studies on Ultra-soft Polymers</h1>
+            <p class="font-bold text-blue-900 text-sm">Pawar Rajat Ravindra (2023PHXF0134G)</p>
+            <p class="text-[10px] italic">Supervisors: Prof. Iniyan Thiruzelvam N. & Prof. Vikas V. Chaudhari</p>
         </div>
 
-        <div class="grid grid-cols-2 gap-6 p-6 flex-1 overflow-hidden">
+        <div class="grid grid-cols-2 gap-6 p-6 flex-1">
             <div class="flex flex-col gap-4">
-                <div>
+                <section>
                     <div class="header-box">Background & Objectives</div>
-                    <ul class="space-y-1 mb-2">
-                        <li>Ultra-soft polymers mimic soft tissue properties.</li>
-                        <li>Existing models are insufficient for < 100 kPa regimes.</li>
-                        <li>Goal: Accurate quantification and predictive modeling.</li>
-                    </ul>
-                    <img src="1.png" class="poster-img">
-                </div>
-
-                <div>
+                    <div class="content-text">
+                        <p>• Ultra-soft polymers mimic soft tissue properties.</p>
+                        <p>• Current models insufficient for ultra-soft regimes.</p>
+                        <p>• Goal: Establish full-field deformation characterization.</p>
+                    </div>
+                    <img src="1.jpg" class="poster-img">
+                </section>
+                <section>
                     <div class="header-box">Material 1: PCG Hydrogel</div>
-                    <p class="mb-2 font-bold text-center">Synthesis Steps & Characterization</p>
-                    <img src="2.png" class="poster-img">
-                    <img src="3.png" class="poster-img">
-                </div>
+                    <img src="2.jpg" class="poster-img">
+                    <img src="3.jpg" class="poster-img">
+                </section>
             </div>
 
             <div class="flex flex-col gap-4">
-                <div>
+                <section>
                     <div class="header-box">Material 2: Ecoflex Elastomer</div>
-                    <p class="mb-2 text-center italic">Base-to-curing ratio 1:1</p>
                     <div class="grid grid-cols-2 gap-2">
-                        <img src="4.png" class="poster-img">
-                        <img src="5.png" class="poster-img">
+                        <img src="4.jpg" class="poster-img">
+                        <img src="5.jpg" class="poster-img">
                     </div>
-                </div>
-
-                <div>
-                    <div class="header-box">Characterization: Rheology & DIC</div>
-                    <div class="grid grid-cols-2 gap-2 mb-2">
-                        <img src="6.png" class="poster-img">
-                        <img src="7.png" class="poster-img">
-                    </div>
-                    <p class="text-xs mb-2">Advanced Protocol: 2D DIC Image Grabbing System</p>
+                </section>
+                <section>
+                    <div class="header-box">Characterization & 2D DIC</div>
                     <div class="grid grid-cols-2 gap-2">
-                        <img src="8.png" class="poster-img">
-                        <img src="9.png" class="poster-img">
+                        <img src="6.jpg" class="poster-img">
+                        <img src="7.jpg" class="poster-img">
                     </div>
-                    <img src="10.png" class="poster-img" style="margin-top:8px;">
-                </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <img src="8.jpg" class="poster-img">
+                        <img src="9.jpg" class="poster-img">
+                    </div>
+                    <img src="10.jpg" class="poster-img">
+                </section>
             </div>
         </div>
     </div>
