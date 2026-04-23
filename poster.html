@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Poster - A4 Single Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f1f5f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 0;
+        }
+
+        .poster-container {
+            width: 794px; /* Exact A4 width at 96 DPI */
+            background-color: #ffffff; 
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            color: #1e293b;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* The Fix: Force single page during print */
+        @page {
+            size: auto; /* Let the content define the height */
+            margin: 0mm;
+        }
+
+        @media print {
+            body { 
+                background: white; 
+                padding: 0 !important;
+                display: block;
+            }
+            .poster-container {
+                width: 100% !important;
+                border: none !important;
+                box-shadow: none !important;
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+            .no-print { display: none !important; }
+        }
+
+        .innovate-stripe { background-color: #f59e0b; }
+        .achieve-stripe { background-color: #38bdf8; }
+        .lead-stripe { background-color: #ef4444; }
+
+        .section-header {
+            background-color: #1e3a8a;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.3rem 0.75rem;
+            text-align: center;
+            margin-bottom: 0.75rem;
+            border-radius: 4px;
+        }
+
+        .content-text { font-size: 0.85rem; line-height: 1.5; }
+        
+        .poster-img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            display: block;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster-container">
+        <div class="bg-white h-[80px] flex items-center relative px-6 border-b border-gray-200">
+            <div class="w-1/4 h-[60px] flex items-center justify-center">
+                <img src="logo.png" onerror="this.onerror=null; this.src='logo.jpg'" class="h-full object-contain">
+            </div>
+            <div class="w-2/4 text-center">
+                <h1 class="text-[#1e3a8a] text-xl font-bold">Birla Institute of Technology & Science, Pilani</h1>
+                <p class="text-gray-600 text-xs">K K Birla Goa Campus</p>
+            </div>
+            <div class="absolute top-0 right-0 flex h-[40px] w-[180px]">
+                <div class="innovate-stripe flex-1"></div>
+                <div class="achieve-stripe flex-1"></div>
+                <div class="lead-stripe flex-1"></div>
+            </div>
+        </div>
+
+        <div class="bg-gray-50 text-center py-4 border-b-2 border-yellow-500">
+            <h2 class="text-xs font-bold uppercase mb-1 text-blue-800">Photomechanics & Material Testing Laboratory</h2>
+            <h1 class="text-xl font-extrabold mb-1 text-gray-900">DEFORMATION STUDIES ON ULTRA-SOFT POLYMERS</h1>
+            <p class="text-sm font-semibold text-gray-800">Pawar Rajat Ravindra (2023PHXF0134G)</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 p-5">
+            <div class="space-y-4">
+                <section>
+                    <h2 class="section-header">Background & Objectives</h2>
+                    <div class="content-text mb-3">
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Rapid growth of wearable electronics demands <b>mechanically compliant materials</b>.</li>
+                            <li>Existing models are insufficient for <100 kPa.</li>
+                        </ul>
+                    </div>
+                    <img src="1.png" onerror="this.onerror=null; this.src='1.jpg'" class="poster-img">
+                </section>
+
+                <section>
+                    <h2 class="section-header">Material 1: PCG Hydrogel</h2>
+                    <img src="2.png" onerror="this.onerror=null; this.src='2.jpg'" class="poster-img">
+                    <img src="3.png" onerror="this.onerror=null; this.src='3.jpg'" class="poster-img">
+                </section>
+            </div>
+
+            <div class="space-y-4">
+                <section>
+                    <h2 class="section-header">Material 2: Ecoflex</h2>
+                    <img src="4.png" onerror="this.onerror=null; this.src='4.jpg'" class="poster-img">
+                    <img src="5.png" onerror="this.onerror=null; this.src='5.jpg'" class="poster-img">
+                </section>
+
+                <section>
+                    <h2 class="section-header">Characterization & DIC</h2>
+                    <div class="grid grid-cols-2 gap-2">
+                        <img src="6.png" onerror="this.onerror=null; this.src='6.jpg'" class="poster-img">
+                        <img src="7.png" onerror="this.onerror=null; this.src='7.jpg'" class="poster-img">
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <img src="8.png" onerror="this.onerror=null; this.src='8.jpg'" class="poster-img">
+                        <img src="9.png" onerror="this.onerror=null; this.src='9.jpg'" class="poster-img">
+                    </div>
+                    <img src="10.png" onerror="this.onerror=null; this.src='10.jpg'" class="poster-img">
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
